@@ -1,0 +1,11 @@
+<h1>Welcome#home</h1>
+<p>Find me in app/views/welcome/home.html.erb</p>
+
+
+<%= form_tag 'parse_emails' do |f|  %>
+
+	<%= text_area_tag :text, @text , rows: 20, cols: 80 %>
+	<%= submit_tag 'Parse text' %>
+<% end %>
+
+<%= @text %>
