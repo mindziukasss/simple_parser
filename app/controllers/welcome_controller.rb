@@ -1,11 +1,14 @@
 class WelcomeController < ApplicationController
+
   def home
-  	 @text = "This you text" 
+  	@emails = Email.all
+  	@text = "This you text" 
   end
 
   def parse
   	@text = params[:text]
-  	render :home
-  end
+  	@emails = EmailsParser.parse_emails(@text)
+  	redirect_to root_path
+	end
 
 end

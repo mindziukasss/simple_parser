@@ -8,4 +8,6 @@
 	<%= submit_tag 'Parse text' %>
 <% end %>
 
-<%= @text %>
+<% @emails.each do |email| %>
+	<%= email.email %></br>
+<% end %>
