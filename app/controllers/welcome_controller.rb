@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
 
   def parse
   	@text = params[:text]
-  	@emails = EmailsParser.parse_emails(@text)
+  	EmailsParser.parse_emails(@text)
   	redirect_to root_path
 	end
 
