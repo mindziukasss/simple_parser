@@ -1,13 +1,27 @@
-<h1>Welcome#home</h1>
-<p>Find me in app/views/welcome/home.html.erb</p>
+<div class="container">
+	<h1>Email collect</h1>
+	<div class="row">
+		<div class="col-md-6">
+			<%= form_tag 'parse_emails' do |f|  %>
+				<%= text_area_tag :text, @text , rows: 20, cols: 60 %>
+				<%= submit_tag 'Parse text',class: "btn btn-primary" %>
+			<% end %>
+		</div>
+		<div class="col-md-6">
+			<% @emails.each do |email| %>
+				<%= email.email %></br>
+			<% end %>
+		</div>
+	</div>
+</div>
+	
 
 
-<%= form_tag 'parse_emails' do |f|  %>
 
-	<%= text_area_tag :text, @text , rows: 20, cols: 80 %>
-	<%= submit_tag 'Parse text' %>
-<% end %>
 
-<% @emails.each do |email| %>
-	<%= email.email %></br>
-<% end %>
+
+
+
+
+
+
