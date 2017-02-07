@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def home
-  	@emails = Email.all
+    @emails = Email.all.page params[:page]
   	@text = "This you text" 
   end
 

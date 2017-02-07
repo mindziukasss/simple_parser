@@ -9,4 +9,6 @@ class EmailsParser
 			Email.create(email: email)
 		end
 	end
+ 
+
 end

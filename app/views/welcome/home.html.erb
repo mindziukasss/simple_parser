@@ -11,6 +11,7 @@
 			<% @emails.each do |email| %>
 				<%= email.email %></br>
 			<% end %>
+				<%= paginate @emails %>
 		</div>
 	</div>
 </div>
