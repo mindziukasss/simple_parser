@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users  
   root 'welcome#home'
   post 'parse_emails', to: 'welcome#parse', as: :parse_emails
   get 'email_list', to: 'email#email_list'

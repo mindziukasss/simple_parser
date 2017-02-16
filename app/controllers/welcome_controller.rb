@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+  before_action :authenticate_user!, except: [:about]
 
   def home
     @emails = Email.all.page params[:page]
